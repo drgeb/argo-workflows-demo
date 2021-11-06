@@ -10,7 +10,7 @@ install:
 hello:
 	@cat 02_hello_world/hello.yaml
 	@echo "\n"
-	@argo submit 02_hello_world/hello.yaml -p message="goodbye"
+	@argo submit --namespace workflows 02_hello_world/hello.yaml -p message="goodbye"
 
 install-minio:
 	@04_file_io/install.sh
